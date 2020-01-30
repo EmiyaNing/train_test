@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.16.2)
+project(test2)
+set(CMAKE_CXX_STANDARD 11)
+find_package(OpenCV REQUIRED)
+find_package(BLAS REQUIRED)
+message(STATUS ${BLAS_LIBRARIES})
+target_link_libraries(train ${OpenCV_LIBS} ${BLAS_LIBRARIES})
